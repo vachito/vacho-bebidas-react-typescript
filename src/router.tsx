@@ -1,4 +1,4 @@
-//continuar en el video 286
+//continuar en el video 293
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import IndexPage from "./views/IndexPage";
 import FavoritesPage from "./views/FavoritesPage";
