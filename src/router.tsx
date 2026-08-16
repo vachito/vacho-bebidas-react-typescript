@@ -1,4 +1,4 @@
-//continuar en el video 295
+//continuar en el video 303
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import IndexPage from "./views/IndexPage";
