@@ -9,6 +9,7 @@ export type RecipesSliceType = {
     fetchCategories: () => Promise<void>
     searchRecipes: (SearchFilters:SearchFilter) => Promise<void>
     selectRecipe : (id : Drink['idDrink']) => Promise<void>
+    closeModal: () =>void
 }
 
 export const createRecipesSlice : StateCreator<RecipesSliceType> = (set) => ({
@@ -38,5 +39,11 @@ export const createRecipesSlice : StateCreator<RecipesSliceType> = (set) => ({
         selectedRecipe,
         modal:true
        })
+    },
+    closeModal: () => {
+        set({
+            modal:false,
+            selectedRecipe: {} as Recipe
+        })
     }
 })
