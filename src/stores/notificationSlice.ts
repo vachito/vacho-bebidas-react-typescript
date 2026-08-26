@@ -1,0 +1,30 @@
+import type{ StateCreator } from "zustand";
+
+type Notification = {
+    text:string
+    error: boolean
+    show: boolean
+}
+
+export type NotificationsSliceType = {
+    notification: Notification
+    showNotification : (payload : Pick<Notification, 'text' | 'error'>) => void
+}
+
+export const createNotificationSlice : StateCreator<NotificationsSliceType> = (set,get) => ({
+   notification: {
+    text:'',
+    error: false,
+    show: false
+   },
+   showNotification: (payload) => {
+    set({
+        notification: {
+            text: payload.text,
+            error: payload.error,
+            show: true
+        }
+    })
+   } 
+})
+
